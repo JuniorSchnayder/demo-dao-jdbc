@@ -6,6 +6,7 @@ import java.util.Objects;
 public class Department implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
+	
 	private Integer id;
 	private String name;
 	
@@ -35,7 +36,7 @@ public class Department implements Serializable{
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(id, name);
+		return Objects.hash(id);
 	}
 
 	@Override
@@ -47,7 +48,7 @@ public class Department implements Serializable{
 		if (getClass() != obj.getClass())
 			return false;
 		Department other = (Department) obj;
-		return Objects.equals(id, other.id) && Objects.equals(name, other.name);
+		return Objects.equals(id, other.id);
 	}
 
 	@Override
