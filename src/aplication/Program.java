@@ -35,9 +35,21 @@ public class Program {
 		}
 		System.out.println();
 		
+		/*
 		System.out.println("===== TEST 4: seller insert =====");
 		sellerDao.insert(seller);
 		System.out.println("Sucesso! Novo ID: "+ seller.getId());
+		System.out.println();
+		*/
+
+		
+		System.out.println("===== TEST 5: seller update =====");
+		seller = sellerDao.findById(1);
+		seller.setName("Raabe Lopes");
+		sellerDao.update(seller);
+		System.out.println("Sucesso!");
+		System.out.println();
+
 
 	}
 
