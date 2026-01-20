@@ -14,10 +14,10 @@ public class Program {
 	public static void main(String[] args) {
 
 		Department department = new Department(4,"Math");
-		Seller seller = new Seller(2,"Junior","junior@gmail.com",new Date(),3000.0,department);
-		
-		System.out.println("===== TEST 1: seller findById =====");
+		Seller seller = new Seller(null,"Junior Schnayder","juniorSch@gmail.com",new Date(),5227.0,department);
 		SellerDao sellerDao = DaoFactory.createSellerDao();
+
+		System.out.println("===== TEST 1: seller findById =====");
 		System.out.println(sellerDao.findById(3));
 		System.out.println();
 
@@ -34,6 +34,10 @@ public class Program {
 			System.out.println(s);
 		}
 		System.out.println();
+		
+		System.out.println("===== TEST 4: seller insert =====");
+		sellerDao.insert(seller);
+		System.out.println("Sucesso! Novo ID: "+ seller.getId());
 
 	}
 
