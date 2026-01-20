@@ -50,6 +50,10 @@ public class Program {
 		System.out.println("Sucesso!");
 		System.out.println();
 
+		System.out.println("===== TEST 6: seller deleteById =====");
+		sellerDao.deleteById(14);
+		System.out.println("Sucesso!");
+		System.out.println();
 
 	}
 
